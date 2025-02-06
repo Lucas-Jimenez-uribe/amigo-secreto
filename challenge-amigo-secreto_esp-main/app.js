@@ -45,20 +45,25 @@ function actualizarLista() {
     });
 }
 
-
 function sortearAmigo() {
-  if (amigos.length == 0 ) {
-    alert('No hay amigos registrados')
-  }else{
+  // Verifica si la lista de amigos está vacía
+  if (amigos.length == 0) {
+    alert('No hay amigos registrados'); // Muestra una alerta si no hay amigos en la lista
+  } else {
+    // Genera un índice aleatorio entre 0 y la longitud del array (excluyendo el último índice)
     let indiceAleatorio = Math.floor(Math.random() * amigos.length);
-    let amigoSorteado = amigos[indiceAleatorio];
-    console.log(amigoSorteado)
-    document.getElementById("resultado").innerHTML = `🎉 Amigo secreto: ${amigoSorteado}`;
 
+    // Obtiene el amigo correspondiente al índice generado
+    let amigoSorteado = amigos[indiceAleatorio];
+
+    // Muestra en la consola quién fue seleccionado
+    console.log(amigoSorteado);
+
+    // Actualiza el contenido del elemento con id "resultado" en el HTML
+    document.getElementById("resultado").innerHTML = `🎉 Amigo secreto: ${amigoSorteado}`;
   }
-  
-  document.getElementById("resultado").innerHTML = `🎉 Amigo secreto: ${amigoSorteado}`;
 }
+
 
 
 
