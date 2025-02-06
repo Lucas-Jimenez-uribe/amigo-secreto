@@ -46,5 +46,19 @@ function actualizarLista() {
 }
 
 
+function sortearAmigo() {
+  if (amigos.length == 0 ) {
+    alert('No hay amigos registrados')
+  }else{
+    let indiceAleatorio = Math.floor(Math.random() * amigos.length);
+    let amigoSorteado = amigos[indiceAleatorio];
+    console.log(amigoSorteado)
+    document.getElementById("resultado").innerHTML = `🎉 Amigo secreto: ${amigoSorteado}`;
+
+  }
+  
+  document.getElementById("resultado").innerHTML = `🎉 Amigo secreto: ${amigoSorteado}`;
+}
+
 
 
